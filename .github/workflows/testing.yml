@@ -35,4 +35,8 @@ jobs:
       - name: installer le vendor 
         run: composer install     
       - name: créer base de donnee
-        run: symfony console doctrine:database:create
+        run: php bin/console doctrine:database:create
+      - name: création du fichier de mgration SQL
+        run: php bin/console make:migration
+      - name: execution script sql
+        run: php bin/console -n doctrine:migrations:migrate
