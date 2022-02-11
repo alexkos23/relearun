@@ -27,5 +27,8 @@ jobs:
       - name: Run a one-line script
         run: php -v 
       - name: Test composer
-        run : composer -v
-    
+        run: composer -v
+      - name: renommer fichier environnement 
+        run: mv _.env.exempl
+      - name: installer le vendor 
+        run: composer install     
