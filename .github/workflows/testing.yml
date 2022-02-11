@@ -34,3 +34,5 @@ jobs:
         run: cp _.env.exempl .env
       - name: installer le vendor 
         run: composer install     
+      - name: créer base de donnee
+        run: symfony console doctrine:database:create
